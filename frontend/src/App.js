@@ -1,24 +1,8 @@
-import axios from "axios"
-import { useEffect, useState } from "react"
+import React from 'react'
+import AppBar from '@mui/material/AppBar'
 
-const api = axios.create({
-  baseURL: 'http://localhost:8000'
-})
-
-function App() {
-  const [message, setMessage] = useState("")
-
-  useEffect(() => {
-    const getData = async() => {
-      const res = await api.get('/')
-      setMessage(res.data.message)
-    }
-    getData()
-  }, [])
-
-  return (
-    <div>{message}</div>
-  );
+const App = () => {
+  return <AppBar position="static">hasdf</AppBar>
 }
 
-export default App;
+export default App
